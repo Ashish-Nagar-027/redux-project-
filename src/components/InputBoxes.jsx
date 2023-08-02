@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { selectButton } from '../features/ButtonOperation'
 import { setDefault, setEmptyInputs } from '../features/InputHandlerSlice'
-import { increaseOperationValue } from '../features/operationsSlice'
+import { selectOperations } from '../features/operationsSlice'
 import { setResult } from '../features/resultSlice'
 
 const InputBoxes = () => {
@@ -18,7 +18,7 @@ const InputBoxes = () => {
 
   const showResult = useSelector((state) => state.result.showResult);
     
-
+  const NumOfoperations = useSelector(selectOperations);
 
    useEffect(()=> {
      setInput1("")
@@ -39,9 +39,9 @@ const InputBoxes = () => {
      if(showResult){
       const result = eval(input1 + button + input2)
       dispatch(setResult(result))
-      dispatch(increaseOperationValue())
+      // dispatch(increaseOperationValue())
      }
-  } , [showResult,button])
+  } , [showResult,button,NumOfoperations])
 
 
   return (
