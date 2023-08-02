@@ -15,7 +15,7 @@ function App() {
     <div className="App">
 
       <h1 className="text-3xl font-bold underline">
-          Problem solution
+          Simple calculator using redux
       </h1>
 
       <div className='container border-2 mt-10 p-10 rounded-2xl border-black'>
