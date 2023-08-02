@@ -1,6 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { setButton } from '../features/ButtonOperation'
+import { increaseOperationValue } from '../features/operationsSlice'
 import {  showResult } from '../features/resultSlice'
 
 const Buttons = () => {
@@ -9,10 +10,11 @@ const Buttons = () => {
   const dispatch = useDispatch()
   
   const handleValue = (button) => {
-
+   
     dispatch(setButton(button))
       if(emptyInputs){
         dispatch(showResult())
+        dispatch(increaseOperationValue())
       }
   }
   
