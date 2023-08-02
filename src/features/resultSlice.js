@@ -21,6 +21,4 @@ export const resultSlice = createSlice({
 
 export const { setResult, showResult, hideResult } = resultSlice.actions;
 
-
-
 export default resultSlice.reducer;
