@@ -1,7 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
 import { selectOperations } from '../features/operationsSlice';
-// import { useDispatch } from 'react-redux';
 
 const Operations = () => {
   const NumOfoperations = useSelector(selectOperations);
